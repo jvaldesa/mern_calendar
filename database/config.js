@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
 
 const dbConnection = async() => {
-    mongoose.set('strictQuery', true)
+    // mongoose.set('strictQuery', true)
     
     try {
-        await mongoose.connect(process.env.DB_CNN)
+        await mongoose.connect(process.env.DB_CNN, )
+            
 
         console.log('DB Online');
 
