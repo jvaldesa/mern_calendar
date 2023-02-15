@@ -28,6 +28,10 @@ app.use('/api/events', require('./routes/events'))
 // TODO: CRUD: Eventos
 
 
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html')
+})
+
 //Escuchar peticiones
 app.listen(process.env.PORT, () => {
     console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
